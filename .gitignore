@@ -1,0 +1,9 @@
+.idea/
+__pycache__/
+.pytest_cache/
+.venv/
+.env
+.build/
+node_modules/
+backups/
+*.pyc

@@ -1,0 +1,514 @@
+[
+  {
+    "table_name": "assessments",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "assessments",
+    "column_name": "assignment_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Назначение → assignments.id"
+  },
+  {
+    "table_name": "assessments",
+    "column_name": "title",
+    "data_type": "character varying",
+    "character_maximum_length": 150,
+    "is_nullable": "NO",
+    "description": "Название работы"
+  },
+  {
+    "table_name": "assessments",
+    "column_name": "kind",
+    "data_type": "character varying",
+    "character_maximum_length": 20,
+    "is_nullable": "NO",
+    "description": "Тип контроля"
+  },
+  {
+    "table_name": "assessments",
+    "column_name": "weight",
+    "data_type": "numeric",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Положительный вес"
+  },
+  {
+    "table_name": "assessments",
+    "column_name": "grading",
+    "data_type": "character varying",
+    "character_maximum_length": 10,
+    "is_nullable": "NO",
+    "description": "Балльная или зачетная шкала"
+  },
+  {
+    "table_name": "assignments",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "assignments",
+    "column_name": "group_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Группа → groups.id"
+  },
+  {
+    "table_name": "assignments",
+    "column_name": "discipline_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Дисциплина → disciplines.id"
+  },
+  {
+    "table_name": "assignments",
+    "column_name": "teacher_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Преподаватель → teachers.id"
+  },
+  {
+    "table_name": "assignments",
+    "column_name": "semester",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Семестр от 1 до 12"
+  },
+  {
+    "table_name": "assignments",
+    "column_name": "academic_year",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Учебный год"
+  },
+  {
+    "table_name": "audit_log",
+    "column_name": "id",
+    "data_type": "bigint",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "audit_log",
+    "column_name": "user_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "YES",
+    "description": "Учетная запись → users.id"
+  },
+  {
+    "table_name": "audit_log",
+    "column_name": "action",
+    "data_type": "character varying",
+    "character_maximum_length": 30,
+    "is_nullable": "NO",
+    "description": "Вид действия"
+  },
+  {
+    "table_name": "audit_log",
+    "column_name": "entity",
+    "data_type": "character varying",
+    "character_maximum_length": 40,
+    "is_nullable": "NO",
+    "description": "Имя сущности"
+  },
+  {
+    "table_name": "audit_log",
+    "column_name": "entity_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "YES",
+    "description": "Идентификатор объекта события"
+  },
+  {
+    "table_name": "audit_log",
+    "column_name": "created_at",
+    "data_type": "timestamp with time zone",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Время события"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "name",
+    "data_type": "character varying",
+    "character_maximum_length": 150,
+    "is_nullable": "NO",
+    "description": "Название"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "description",
+    "data_type": "text",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Описание дисциплины"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "lecture_hours",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Часы лекций"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "practice_hours",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Часы практик"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "lab_hours",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Часы лабораторных"
+  },
+  {
+    "table_name": "disciplines",
+    "column_name": "control_form",
+    "data_type": "character varying",
+    "character_maximum_length": 20,
+    "is_nullable": "NO",
+    "description": "Экзамен, зачет, курсовая"
+  },
+  {
+    "table_name": "grades",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "grades",
+    "column_name": "student_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Студент → students.id"
+  },
+  {
+    "table_name": "grades",
+    "column_name": "assessment_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Работа → assessments.id"
+  },
+  {
+    "table_name": "grades",
+    "column_name": "value",
+    "data_type": "numeric",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Значение оценки"
+  },
+  {
+    "table_name": "grades",
+    "column_name": "comment",
+    "data_type": "character varying",
+    "character_maximum_length": 300,
+    "is_nullable": "NO",
+    "description": "Комментарий"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "name",
+    "data_type": "character varying",
+    "character_maximum_length": 40,
+    "is_nullable": "NO",
+    "description": "Название"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "specialty",
+    "data_type": "character varying",
+    "character_maximum_length": 150,
+    "is_nullable": "NO",
+    "description": "Специальность"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "course",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Курс от 1 до 6"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "study_mode",
+    "data_type": "character varying",
+    "character_maximum_length": 20,
+    "is_nullable": "NO",
+    "description": "Форма обучения"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "intake_year",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Год набора"
+  },
+  {
+    "table_name": "groups",
+    "column_name": "curator_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "YES",
+    "description": "Куратор → teachers.id"
+  },
+  {
+    "table_name": "login_attempts",
+    "column_name": "key",
+    "data_type": "text",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Хеш пары IP и логин"
+  },
+  {
+    "table_name": "login_attempts",
+    "column_name": "attempted_at",
+    "data_type": "timestamp with time zone",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Время неуспешного входа"
+  },
+  {
+    "table_name": "sessions",
+    "column_name": "token_hash",
+    "data_type": "text",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Хеш сессионного токена"
+  },
+  {
+    "table_name": "sessions",
+    "column_name": "user_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Учетная запись → users.id"
+  },
+  {
+    "table_name": "sessions",
+    "column_name": "expires_at",
+    "data_type": "timestamp with time zone",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Срок действия сессии"
+  },
+  {
+    "table_name": "students",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "students",
+    "column_name": "full_name",
+    "data_type": "character varying",
+    "character_maximum_length": 150,
+    "is_nullable": "NO",
+    "description": "Фамилия, имя, отчество"
+  },
+  {
+    "table_name": "students",
+    "column_name": "birth_date",
+    "data_type": "date",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Дата рождения"
+  },
+  {
+    "table_name": "students",
+    "column_name": "gender",
+    "data_type": "character varying",
+    "character_maximum_length": 10,
+    "is_nullable": "NO",
+    "description": "Пол"
+  },
+  {
+    "table_name": "students",
+    "column_name": "contacts",
+    "data_type": "character varying",
+    "character_maximum_length": 200,
+    "is_nullable": "NO",
+    "description": "Контактная строка"
+  },
+  {
+    "table_name": "students",
+    "column_name": "group_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Группа → groups.id"
+  },
+  {
+    "table_name": "students",
+    "column_name": "funding",
+    "data_type": "character varying",
+    "character_maximum_length": 10,
+    "is_nullable": "NO",
+    "description": "Бюджет или контракт"
+  },
+  {
+    "table_name": "students",
+    "column_name": "admission_date",
+    "data_type": "date",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Дата поступления"
+  },
+  {
+    "table_name": "students",
+    "column_name": "status",
+    "data_type": "character varying",
+    "character_maximum_length": 30,
+    "is_nullable": "NO",
+    "description": "Учебный статус"
+  },
+  {
+    "table_name": "teachers",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "teachers",
+    "column_name": "full_name",
+    "data_type": "character varying",
+    "character_maximum_length": 150,
+    "is_nullable": "NO",
+    "description": "Фамилия, имя, отчество"
+  },
+  {
+    "table_name": "teachers",
+    "column_name": "department",
+    "data_type": "character varying",
+    "character_maximum_length": 150,
+    "is_nullable": "NO",
+    "description": "Кафедра"
+  },
+  {
+    "table_name": "teachers",
+    "column_name": "position",
+    "data_type": "character varying",
+    "character_maximum_length": 100,
+    "is_nullable": "NO",
+    "description": "Должность"
+  },
+  {
+    "table_name": "teachers",
+    "column_name": "degree",
+    "data_type": "character varying",
+    "character_maximum_length": 100,
+    "is_nullable": "NO",
+    "description": "Ученая степень"
+  },
+  {
+    "table_name": "teachers",
+    "column_name": "contacts",
+    "data_type": "character varying",
+    "character_maximum_length": 200,
+    "is_nullable": "NO",
+    "description": "Контактная строка"
+  },
+  {
+    "table_name": "users",
+    "column_name": "id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Первичный идентификатор"
+  },
+  {
+    "table_name": "users",
+    "column_name": "username",
+    "data_type": "character varying",
+    "character_maximum_length": 50,
+    "is_nullable": "NO",
+    "description": "Уникальный логин"
+  },
+  {
+    "table_name": "users",
+    "column_name": "password_hash",
+    "data_type": "text",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Соль и PBKDF2-хеш"
+  },
+  {
+    "table_name": "users",
+    "column_name": "role",
+    "data_type": "character varying",
+    "character_maximum_length": 12,
+    "is_nullable": "NO",
+    "description": "Одна из четырех ролей"
+  },
+  {
+    "table_name": "users",
+    "column_name": "student_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "YES",
+    "description": "Студент → students.id"
+  },
+  {
+    "table_name": "users",
+    "column_name": "teacher_id",
+    "data_type": "integer",
+    "character_maximum_length": null,
+    "is_nullable": "YES",
+    "description": "Преподаватель → teachers.id"
+  },
+  {
+    "table_name": "users",
+    "column_name": "active",
+    "data_type": "boolean",
+    "character_maximum_length": null,
+    "is_nullable": "NO",
+    "description": "Активность учетной записи"
+  }
+]

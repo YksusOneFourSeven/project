@@ -1,0 +1,7 @@
+.git
+.idea
+.env
+.build
+backups
+docs
+__pycache__

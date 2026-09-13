@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Учет успеваемости студентов</title>
+    <link rel="stylesheet" href="/static/style.css" />
+    <script defer src="/static/app.js"></script>
+  </head>
+  <body>
+    <header>
+      <div>
+        <small>ИНФОРМАЦИОННАЯ СИСТЕМА</small>
+        <h1>Учет успеваемости</h1>
+      </div>
+      <div id="account"></div>
+    </header>
+    <div id="message" role="status" aria-live="polite"></div>
+    <main>
+      <section id="login-panel">
+        <h2>Вход в систему</h2>
+        <p>Войдите под учетной записью своей роли.</p>
+        <form id="login">
+          <label
+            >Логин<input
+              name="username"
+              required
+              autocomplete="username" /></label
+          ><label
+            >Пароль<input
+              name="password"
+              type="password"
+              required
+              autocomplete="current-password" /></label
+          ><button>Войти</button>
+        </form>
+        <p class="muted">Учебный стенд · данные вымышлены</p>
+      </section>
+      <section id="workspace" hidden>
+        <nav id="menu" aria-label="Разделы системы"></nav>
+        <div class="section-head">
+          <div>
+            <p class="eyebrow">УЧЕБНЫЙ ПРОЦЕСС</p>
+            <h2 id="section-title"></h2>
+          </div>
+          <span id="count"></span>
+        </div>
+        <div id="toolbar">
+          <label
+            >Поиск по таблице<input
+              id="search"
+              type="search"
+              placeholder="Введите ФИО, группу или дисциплину" /></label
+          ><button id="refresh" class="secondary">Обновить</button
+          ><button id="add">Добавить</button>
+        </div>
+        <div id="report-controls" hidden>
+          <label>Вид отчета<select id="report-kind"></select></label
+          ><label>Группа<select id="report-group"></select></label
+          ><label
+            >Назначение дисциплины<select
+              id="report-assignment"
+            ></select></label
+          ><label>Студент<select id="report-student"></select></label
+          ><button id="run-report">Сформировать</button
+          ><button id="excel" class="secondary">Excel</button
+          ><button id="pdf" class="secondary">PDF</button
+          ><button id="print" class="secondary">Печать</button>
+          <p class="muted">
+            Пустой итог означает незавершенные работы. Зачет: 1 — зачет, 0 —
+            незачет. Средний балл не включает зачеты.
+          </p>
+        </div>
+        <div id="admin-tools" hidden>
+          <button id="backup">Скачать архив учебных данных</button>
+          <p>
+            Полная резервная копия базы с учетными записями создается командой
+            scripts/backup.sh.
+          </p>
+        </div>
+        <div class="table-wrap"><table id="data-table"></table></div>
+        <p class="muted">Нажмите на заголовок столбца для сортировки.</p>
+      </section>
+    </main>
+    <dialog id="editor">
+      <form id="record-form">
+        <h2 id="editor-title"></h2>
+        <div id="fields"></div>
+        <div class="actions">
+          <button type="button" id="cancel" class="secondary">Отмена</button
+          ><button type="submit">Сохранить</button>
+        </div>
+      </form>
+    </dialog>
+    <footer>
+      Лабораторная работа 1 · HTML, CSS, JavaScript · FastAPI · PostgreSQL
+    </footer>
+  </body>
+</html>

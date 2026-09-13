@@ -1,0 +1,269 @@
+:root {
+  font-family: Arial, sans-serif;
+  color: #1b2a40;
+  background: #f4f6f9;
+  font-size: 16px;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  margin: 0;
+}
+header {
+  background: #17334e;
+  color: white;
+  padding: 26px 5%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+h1 {
+  font-size: 27px;
+  margin: 8px 0;
+}
+small,
+.eyebrow {
+  font-size: 11px;
+  letter-spacing: 2px;
+}
+main {
+  margin: 30px auto;
+  max-width: 1400px;
+  padding: 0 4%;
+}
+h2 {
+  font-size: 24px;
+}
+#login-panel {
+  max-width: 430px;
+  margin: 60px auto;
+  background: white;
+  padding: 32px;
+  border: 1px solid #d9e1e9;
+  border-radius: 8px;
+}
+label {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  font-size: 14px;
+  margin-bottom: 15px;
+}
+input,
+select,
+textarea {
+  border: 1px solid #aebdca;
+  border-radius: 4px;
+  background: white;
+  padding: 10px;
+  font: inherit;
+  min-width: 0;
+}
+button {
+  background: #23648f;
+  color: white;
+  padding: 11px 17px;
+  border: 0;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+button:hover {
+  background: #164c70;
+}
+button:focus-visible,
+input:focus-visible,
+select:focus-visible {
+  outline: 3px solid #e0a94b;
+  outline-offset: 2px;
+}
+.secondary {
+  background: #e3eaf1;
+  color: #19364f;
+}
+.danger {
+  background: #983f40;
+}
+nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #ccd5df;
+  padding-bottom: 20px;
+}
+nav button {
+  background: transparent;
+  color: #17334e;
+}
+nav button.active {
+  background: #17334e;
+  color: white;
+}
+.section-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.eyebrow {
+  color: #647788;
+  margin-top: 30px;
+}
+#toolbar {
+  display: flex;
+  align-items: end;
+  gap: 12px;
+  margin: 15px 0;
+}
+#toolbar label {
+  margin: 0;
+  flex: 1;
+}
+#report-controls {
+  background: white;
+  border: 1px solid #d9e1e9;
+  padding: 20px;
+  margin: 16px 0;
+}
+#report-controls label {
+  display: inline-flex;
+  width: 23%;
+  margin-right: 1%;
+}
+.table-wrap {
+  overflow: auto;
+  background: white;
+  border: 1px solid #d9e1e9;
+  border-radius: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th,
+td {
+  padding: 12px 14px;
+  text-align: left;
+  border-bottom: 1px solid #e1e6ec;
+  vertical-align: top;
+}
+th {
+  background: #e9eff5;
+  white-space: nowrap;
+}
+th button {
+  background: none;
+  color: #17334e;
+  padding: 0;
+  text-align: left;
+  font-weight: bold;
+}
+td button {
+  padding: 6px 9px;
+  margin: 2px;
+}
+tr:hover td {
+  background: #f8fafc;
+}
+.muted {
+  color: #687887;
+  font-size: 13px;
+  line-height: 1.5;
+}
+#message {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  padding: 0 5%;
+  background: #fff2d6;
+  line-height: 2.5;
+}
+#message.error {
+  background: #ffe3e3;
+  color: #7b2424;
+}
+#account button {
+  margin-left: 12px;
+}
+dialog {
+  border: 1px solid #bbc8d3;
+  border-radius: 8px;
+  width: min(680px, 95vw);
+  max-height: 90vh;
+  padding: 28px;
+}
+dialog::backdrop {
+  background: #172c4266;
+}
+#fields {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0 18px;
+}
+.actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+footer {
+  padding: 30px 5%;
+  font-size: 12px;
+  color: #687887;
+}
+[hidden] {
+  display: none !important;
+}
+@media (max-width: 700px) {
+  header {
+    display: block;
+  }
+  #fields {
+    display: block;
+  }
+  #toolbar {
+    flex-wrap: wrap;
+  }
+  #report-controls label {
+    width: 100%;
+  }
+  #account {
+    margin-top: 12px;
+  }
+}
+@media print {
+  header,
+  nav,
+  #toolbar,
+  #report-controls,
+  #account,
+  footer,
+  #message,
+  .muted {
+    display: none !important;
+  }
+  main {
+    max-width: none;
+    padding: 0;
+  }
+  .table-wrap {
+    overflow: visible;
+    border: 0;
+  }
+  table {
+    font-size: 9pt;
+  }
+  th,
+  td {
+    padding: 5px;
+  }
+  body {
+    background: white;
+  }
+  #section-title {
+    font-size: 16pt;
+  }
+  button {
+    display: none;
+  }
+}
